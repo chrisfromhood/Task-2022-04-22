@@ -28,8 +28,12 @@ body {
 }
 
 .unintencional-injuries__content {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
   margin-left: 260px;
   margin-right: 105px;
+  padding: 0 20px;
 }
 
 .unintencional-injuries__title,
@@ -37,12 +41,11 @@ body {
   font-size: 80px;
   font-weight: 500;
   line-height: 88px;
-  margin-left: 260px;
+  margin-left: 280px;
   margin-top: 104px;
   padding-bottom: 17px;
   margin-bottom: 40px;
   position: relative;
-  grid-area: title;
 }
 
 .unintencional-injuries__title::after,
@@ -62,7 +65,6 @@ body {
     "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  padding-bottom: 16px;
 }
 
 .unintencional-injuries__text--bold {
@@ -77,11 +79,15 @@ body {
   font-size: 18px;
   color: #cb6942;
   cursor: pointer;
+  margin-top: 9px;
 }
-
-.unintencional-injuries__btn,
-.unintencional-injuries__btn:link,
-.unintencional-injuries__btn:visited {
+.unintencional-injuries__btn-wrapper {
+  margin-top: 34px;
+  width: 100%;
+}
+.unintencional-injuries--btn,
+.unintencional-injuries--btn:link,
+.unintencional-injuries--btn:visited {
   display: inline-block;
   width: 100%;
   letter-spacing: 3px;
@@ -97,8 +103,8 @@ body {
   cursor: pointer;
   border: none;
 }
-.unintencional-injuries__btn:hover,
-.unintencional-injuries__btn:active {
+.unintencional-injuries--btn:hover,
+.unintencional-injuries--btn:active {
   background-color: #222629;
   color: #cb6942;
 }
