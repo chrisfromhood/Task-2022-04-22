@@ -1,0 +1,157 @@
+//import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #414141;
+}
+
+.unintencional-injuries {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding-bottom: 160px;
+}
+
+.unintencional-injuries__left {
+  height: 900px;
+  display: block;
+  width: 44.01041666666667%;
+}
+.unintencional-injuries__right {
+  background-image: url(../img/unintencional-injuries-img-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  display: block;
+  width: 55.98958333333333%;
+}
+
+.unintencional-injuries__content {
+  margin-left: 260px;
+  margin-right: 105px;
+}
+
+.unintencional-injuries__title,
+.locations__title {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 88px;
+  margin-left: 260px;
+  margin-top: 104px;
+  padding-bottom: 17px;
+  margin-bottom: 40px;
+  position: relative;
+  grid-area: title;
+}
+
+.unintencional-injuries__title::after,
+.locations__title::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 100%;
+  width: 144px;
+  height: 4px;
+  background: #cb6942;
+  padding-top: 6px;
+}
+
+.unintencional-injuries__text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 16px;
+}
+
+.unintencional-injuries__text--bold {
+  font-weight: 700;
+}
+
+.unintencional-injuries__learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: underline;
+  font-size: 18px;
+  color: #cb6942;
+  cursor: pointer;
+}
+
+.unintencional-injuries__btn,
+.unintencional-injuries__btn:link,
+.unintencional-injuries__btn:visited {
+  display: inline-block;
+  width: 100%;
+  letter-spacing: 3px;
+  padding: 24px 100px;
+  line-height: 27px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background-color: #cb6942;
+  cursor: pointer;
+  border: none;
+}
+.unintencional-injuries__btn:hover,
+.unintencional-injuries__btn:active {
+  background-color: #222629;
+  color: #cb6942;
+}
+
+// LOCATIONS SECTION
+
+.locations {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.locations__title {
+  margin-left: 0;
+  margin-top: 90px;
+  line-height: 106px;
+}
+
+.locations__list {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  color: #cb6942;
+  padding-right: 100px;
+}
+
+.locations__list--1,
+.locations__list--2 {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 16px;
+}
+
+.locations__list--1 {
+  padding-left: 0;
+}
+.locations__list--2 {
+  margin: 0 auto;
+}
+
+.locations__map {
+  background-image: url(../img/locations-img-01.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 944px;
+  background-color: #222629;
+  overflow-x: visible;
+  position: absolute;
+  right: -505px;
+  bottom: -243px;
+}
