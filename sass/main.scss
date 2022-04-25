@@ -16,24 +16,17 @@ body {
 .unintencional-injuries__left {
   height: 900px;
   display: block;
+  margin: 0 calc(5vw + 9px);
+  padding-left: calc(7.5vw + 11px);
   width: 44.01041666666667%;
-}
-.unintencional-injuries__right {
-  background-image: url(../img/unintencional-injuries-img-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 900px;
-  display: block;
-  width: 55.98958333333333%;
-}
 
-.unintencional-injuries__content {
-  display: flex;
-  flex-direction: column;
-  justify-self: end;
-  margin-left: 260px;
-  margin-right: 105px;
-  padding: 0 20px;
+  @media only screen and (max-width: 1400px) {
+    padding-left: 100px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 80px;
+  }
 }
 
 .unintencional-injuries__title,
@@ -41,8 +34,8 @@ body {
   font-size: 80px;
   font-weight: 500;
   line-height: 88px;
-  margin-left: 280px;
   margin-top: 104px;
+  padding-left: 20px;
   padding-bottom: 17px;
   margin-bottom: 40px;
   position: relative;
@@ -58,6 +51,15 @@ body {
   height: 4px;
   background: #cb6942;
   padding-top: 6px;
+}
+
+.unintencional-injuries__content {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  // margin-left: 260px;
+  // margin-right: 105px;
+  padding: 0 20px;
 }
 
 .unintencional-injuries__text {
@@ -109,23 +111,45 @@ body {
   color: #cb6942;
 }
 
+.unintencional-injuries__right {
+  background-image: url(../img/unintencional-injuries-img-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  display: block;
+  width: 55.98958333333333%;
+}
+
 // LOCATIONS SECTION
 
 .locations {
-  max-width: 1400px;
+  max-width: 1383px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow-x: visible;
 }
+
+// .locations__left {
+//   width: 48%;
+// }
+
+// .locations__right {
+//   width: 50%;
+//   position: relative;
+// }
 
 .locations__title {
   margin-left: 0;
   margin-top: 90px;
-  line-height: 106px;
+  // line-height: 106px;
+  font-size: 70px;
+  z-index: 999;
+  padding-left: 0;
 }
 
 .locations__list {
   display: flex;
-  align-items: center;
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
@@ -151,13 +175,22 @@ body {
 .locations__map {
   background-image: url(../img/locations-img-01.jpg);
   background-position: right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  min-width: 948px;
   width: 100%;
   height: 944px;
-  background-color: #222629;
   overflow-x: visible;
   position: absolute;
-  right: -505px;
-  bottom: -243px;
+  right: -100px;
 }
+
+// .locations__right--map {
+//   // max-width: 948px;
+//   width: 100%;
+//   height: 944px;
+//   overflow-x: visible;
+//   position: absolute;
+//   right: -525px;
+//   bottom: 2;
+// }
