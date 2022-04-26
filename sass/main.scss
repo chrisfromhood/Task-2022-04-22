@@ -1,3 +1,21 @@
+//custom grid
+$grid-gutter-width: 20px;
+$grid-columns: 12;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1420px
+);
+$container-max-widths: (
+  sm: 96%,
+  md: 96%,
+  lg: 96%,
+  xl: 1420px
+);
+$gutter: $grid-gutter-width;
+
 //import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -6,39 +24,71 @@ body {
   color: #414141;
 }
 
-.unintencional-injuries {
-  display: flex;
+.container-1920 {
+  max-width: 1920px;
+  overflow-x: hidden;
   width: 100%;
-  position: relative;
-  padding-bottom: 160px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+.unintencional-injuries {
+  padding-bottom: 160px;
+  z-index: -1;
+}
+
+// .unintencional-injuries,
+// .locations {
+//   display: flex;
+//   max-width: 1380px;
+//   padding: 0 20px;
+//   // overflow-x: hidden;
+//   margin: 0 auto;
+//   padding-bottom: 160px;
+//   position: relative;
+// }
+
 .unintencional-injuries__left {
-  height: 900px;
-  display: block;
-  margin: 0 calc(5vw + 9px);
-  padding-left: calc(7.5vw + 11px);
-  width: 44.01041666666667%;
+  // display: block;
+  // margin: 0 calc(5vw + 9px);
+  // padding-left: calc(7.5vw + 11px);
+  // width: 44.01041666666667%;
 
-  @media only screen and (max-width: 1400px) {
-    padding-left: 100px;
-  }
+  // @media only screen and (max-width: 1400px) {
+  //   padding-left: 100px;
+  // }
 
-  @media only screen and (max-width: 1200px) {
-    padding-left: 80px;
-  }
+  // @media only screen and (max-width: 1200px) {
+  //   padding-left: 80px;
+  // }
 }
 
 .unintencional-injuries__title,
 .locations__title {
+  display: flex;
   font-size: 80px;
   font-weight: 500;
-  line-height: 88px;
+  line-height: 1.1;
   margin-top: 104px;
-  padding-left: 20px;
   padding-bottom: 17px;
   margin-bottom: 40px;
   position: relative;
+  width: 100%;
+  max-width: 440px;
+
+  @media only screen and (max-width: 1425px) {
+    font-size: 70px;
+  }
+
+  @media only screen and (max-width: 1340px) {
+    font-size: 62px;
+    margin-top: 52px;
+  }
+
+  // @media only screen and (max-width: 1500px) {
+  //   font-size: 60px;
+  //   line-height: 68px;
+  // }
 }
 
 .unintencional-injuries__title::after,
@@ -57,9 +107,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-self: end;
+  max-width: 440px;
+  // width: 85%;
   // margin-left: 260px;
   // margin-right: 105px;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 .unintencional-injuries__text {
@@ -77,33 +129,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 18px;
   color: #cb6942;
   cursor: pointer;
   margin-top: 9px;
 }
+.unintencional-injuries__learn-more :nth-of-type(2) {
+  margin-left: 16px;
+}
 .unintencional-injuries__btn-wrapper {
-  margin-top: 34px;
+  margin-top: 46px;
   width: 100%;
 }
 .unintencional-injuries--btn,
 .unintencional-injuries--btn:link,
 .unintencional-injuries--btn:visited {
   display: inline-block;
+  letter-spacing: 1px;
   width: 100%;
-  letter-spacing: 3px;
-  padding: 24px 100px;
+  padding: 24px 0;
   line-height: 27px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   background-color: #cb6942;
   cursor: pointer;
   border: none;
+  padding-left: calc(1vw + 11px);
+  padding-right: calc(1vw + 11px);
 }
 .unintencional-injuries--btn:hover,
 .unintencional-injuries--btn:active {
@@ -115,11 +173,16 @@ body {
   background-image: url(../img/unintencional-injuries-img-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 900px;
-  display: block;
-  width: 55.98958333333333%;
+  background-position: center center;
+  // min-height: 900px;
 }
+
+// .unintencional-injuries__right--img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   z-index: 999;
+// }
 
 // LOCATIONS SECTION
 
@@ -180,9 +243,9 @@ body {
   min-width: 948px;
   width: 100%;
   height: 944px;
-  overflow-x: visible;
+  overflow: hidden;
   position: absolute;
-  right: -100px;
+  right: -30px;
 }
 
 // .locations__right--map {
