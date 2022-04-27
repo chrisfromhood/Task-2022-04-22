@@ -33,6 +33,10 @@ body {
 
 .unintencional-injuries {
   padding-bottom: 160px;
+
+  @media only screen and (max-width: 992px) {
+    padding-bottom: 104px;
+  }
 }
 
 .unintencional-injuries__title,
@@ -87,10 +91,14 @@ body {
   position: absolute;
   left: -20px;
   top: 100%;
-  width: 144px;
+  width: 7.5vw;
+  min-width: 64px;
   height: 4px;
   background: #cb6942;
-  padding-top: 6px;
+
+  @media only screen and (max-width: 660px) {
+    height: 2px;
+  }
 }
 
 .unintencional-injuries__content {
@@ -203,45 +211,90 @@ body {
   margin-top: 92px;
   max-width: 600px;
   width: 130%;
+  @media only screen and (max-width: 680px) {
+    margin-bottom: 34px;
+  }
 }
 
 .locations__list {
-  display: flex;
   font-family: inherit;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 1.4444;
   color: #cb6942;
-  padding-right: 100px;
+  max-width: 380px;
+  @media only screen and (max-width: 600px) {
+    max-width: 300px;
+    font-size: 16px;
+  }
 }
 
 .locations__left {
   min-height: 944px;
+  z-index: 10;
 }
 
 .locations__list--1,
 .locations__list--2 {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   list-style-type: none;
   gap: 16px;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 10;
 }
 
+.locations__list--1 li,
+.locations__list--2 li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 16px;
+  width: 100%;
+  z-index: 10;
+}
 .locations__list--1 {
   padding-left: 0;
-}
-.locations__list--2 {
-  margin: 0 auto;
 }
 
 .locations__map {
   background-image: url(../img/locations-img-01.jpg);
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 948px;
-  // overflow: hidden;
+  width: 100%;
+  max-width: 948px;
+  min-height: 944px;
+  // position
   position: absolute;
   right: 60px;
   bottom: 125px;
   z-index: -10;
+
+  @media only screen and (max-width: 1120px) {
+    background-size: contain;
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 920px) {
+    width: 90%;
+    opacity: 0.75;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-size: cover;
+    bottom: 240px;
+    right: 20px;
+    width: 100%;
+    min-height: 500px;
+    opacity: 0.5;
+  }
+
+  @media only screen and (max-width: 380px) {
+    bottom: 275px;
+    right: -30px;
+    min-height: 490px;
+  }
 }
