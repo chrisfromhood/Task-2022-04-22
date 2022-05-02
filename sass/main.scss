@@ -59,11 +59,18 @@ body {
 }
 
 .unintencional-injuries {
+  padding: 0;
   padding-bottom: 160px;
 
   @media only screen and (max-width: 992px) {
     padding-bottom: 104px;
   }
+}
+
+.unintencional-injuries__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .unintencional-injuries__title,
@@ -222,7 +229,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  max-width: 1075px;
+  height: 100%;
 
   @media only screen and (max-width: 992px) {
     min-height: 600px;
