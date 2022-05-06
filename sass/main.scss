@@ -58,6 +58,173 @@ body {
   margin: 0 auto;
 }
 
+// THE PROCESS SECTION
+
+.the-process {
+  padding-top: 104px;
+  background-color: #414141;
+  @media only screen and (max-width: 480px) {
+    padding: 40px 32px 0;
+  }
+}
+
+.the-process__title {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  position: relative;
+  padding-bottom: 17px;
+  @media only screen and (max-width: 700px) {
+    font-size: 56px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+}
+
+.the-process__cards-wrapper {
+  padding-top: 74px;
+  padding-bottom: 148px;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+    padding-top: 48px;
+    padding-bottom: 0px;
+  }
+}
+
+.the-process__card {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content;
+  row-gap: 60px;
+  grid-template-areas:
+    ". num"
+    "logo text";
+  @media only screen and (max-width: 1200px) {
+    grid-template-areas:
+      "num num"
+      "logo text";
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 50px;
+    row-gap: 30px;
+  }
+}
+
+.the-process__card--num {
+  width: 100%;
+  margin: 0 auto;
+  justify-self: center;
+  grid-area: num;
+}
+
+.num--1 {
+  height: 108px;
+  @media only screen and (max-width: 700px) {
+    height: 80px;
+  }
+}
+
+.num--2 {
+  height: 110px;
+  @media only screen and (max-width: 700px) {
+    height: 81px;
+  }
+}
+
+.num--3 {
+  height: 140px;
+  margin-bottom: -35px;
+  @media only screen and (max-width: 1200px) {
+    margin-bottom: 0px;
+  }
+  @media only screen and (max-width: 700px) {
+    height: 105px;
+  }
+}
+
+.the-process__card--logo {
+  grid-area: logo;
+  @media only screen and (max-width: 1200px) {
+    align-self: center;
+  }
+}
+
+.card--logo--1 {
+  height: 82px;
+  max-width: 82px;
+  @media only screen and (max-width: 700px) {
+    height: 56px;
+    max-width: 56px;
+  }
+}
+.card--logo--2 {
+  height: 110px;
+  max-width: 76.77px;
+  @media only screen and (max-width: 700px) {
+    height: 64px;
+  }
+}
+.card--logo--3 {
+  height: 140px;
+  max-width: 76px;
+  align-self: flex-start;
+  margin-top: -24px;
+  @media only screen and (max-width: 700px) {
+    height: 64px;
+    max-width: 90px;
+    margin-top: 0;
+  }
+}
+
+.the-process__card--text {
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 0;
+  grid-area: text;
+  align-self: center;
+  max-width: 200px;
+  @media only screen and (max-width: 1200px) {
+    padding-left: 16px;
+  }
+  @media only screen and (max-width: 700px) {
+    font-size: 24px;
+  }
+}
+
+.card--text--2 {
+  max-width: 420px;
+  @media only screen and (max-width: 700px) {
+    max-width: 280px;
+  }
+  @media only screen and (max-width: 420px) {
+    max-width: 240px;
+  }
+}
+
+.card--text--3 {
+  max-width: 230px;
+  @media only screen and (max-width: 700px) {
+    max-width: 186px;
+  }
+}
+
+.btn-wrapp {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 440px;
+  width: auto;
+  padding-bottom: 146px;
+}
+
+// UNINTENCIAL INJUIRIES SECTION
 .unintencional-injuries {
   padding: 0;
   padding-bottom: 160px;
@@ -120,11 +287,12 @@ body {
 }
 
 .unintencional-injuries__title::after,
-.locations__title::after {
+.locations__title::after,
+.the-process__title::after {
   content: "";
   position: absolute;
   left: -20px;
-  top: 100%;
+  bottom: 0;
   width: 7.5vw;
   min-width: 64px;
   height: 4px;
